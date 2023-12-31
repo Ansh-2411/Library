@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= subData.branch %>
+    </title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <h1 id="head"></h1>
+    <section class="main" id="main"></section>
+</body>
+<script>
+    const series = document.getElementById("main")
+    const head = document.getElementById("head")
+    for (let i = 0; i < 8; i++) {
+        series.innerHTML += `
+                        <div class="box">
+                            <a href="/subject?param1=<%= selectData.branch %>&param2=${i + 1}">
+                                <h3>Semester ${i + 1}</h3>
+                            </a>
+                        </div>
+                        `
+    }
+</script>
+
+</html>

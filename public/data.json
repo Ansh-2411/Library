@@ -1,0 +1,79 @@
+{
+  "detail": 1,
+  "sem1": [],
+  "sem2": [],
+  "sem3": [
+    {
+      "subject": "DSA",
+      "subjectLink": "/pdf?param1=1&param2=3&param3=1",
+      "pdfLinks": [
+        {
+          "url": "https://drive.google.com/file/d/1sPPsC35DmHyDCuMEmY6m90JPEv85Wjx1/preview",
+          "title": "1. Introduction"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1loMiwH7qEUtHLie5cN25mlk8skNgq0Cy/preview",
+          "title": "2. Mathematical Notation and Algorithmic Notations"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1qIFx16D0TNMebexFqkoicf3i7PRLt66f/view?usp=sharing",
+          "title": "3. Complexity Analysis"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1gwJheuMEaf64sVusgaNJBxsou8F03eQ_/view?usp=sharing",
+          "title": "4. Arrays"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1bhXNFhV7pZTT4VOjBWHTUlxiiScmBQU9/view?usp=sharing",
+          "title": "5. Stack"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1XIk6PD-YJ42AnBZIGFGeAsKxnT0-FAuY/view?usp=drive_link",
+          "title": "6. Recursion"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1V2w-4KaqhOZflfiTpHWX3GcQHaZ19Yh5/view?usp=sharing",
+          "title": "7. Queue"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1DTlbD5mGMIXd1ZiaMVTzqinZA065s6Mu/view?usp=drive_link",
+          "title": "Combined"
+        },
+        {
+          "url": "https://drive.google.com/file/d/19I5Rho6ouEzRo6mscW0Yt8b92nDhNXc2/view?usp=sharing",
+          "title": "DS handwritten"
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "subjectLink": "/pdf?param1=1&param2=3&param3=2",
+      "pdfLinks": []
+    },
+    {
+      "subject": "Micro",
+      "subjectLink": "/pdf?param1=1&param2=3&param3=3",
+      "pdfLinks": []
+    },
+    {
+      "subject": "Deco",
+      "subjectLink": "/pdf?param1=1&param2=3&param3=4",
+      "pdfLinks": []
+    },
+    {
+      "subject": "Java",
+      "subjectLink": "/pdf?param1=1&param2=3&param3=5",
+      "pdfLinks": []
+    },
+    {
+      "subject": "Minor",
+      "subjectLink": "/pdf?param1=1&param2=3&param3=6",
+      "pdfLinks": []
+    }
+  ],
+  "sem4": [],
+  "sem5": [],
+  "sem6": [],
+  "sem7": [],
+  "sem8": []
+}

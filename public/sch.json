@@ -1,0 +1,40 @@
+{
+    "name":"name",
+    "branch-add":[
+        {
+            "branch-name":"sgg",
+            "branch-link":"lll"
+        }
+    ],
+    "branch-del":[
+        {
+            "branch-name":"sgg",
+            "subjbranchect-link":"lll"
+        }
+    ],
+    "subject-add":[
+        {
+            "subject-name":"sgg",
+            "subject-link":"lll"
+        }
+    ],
+    "subject-del":[
+        {
+            "subject-name":"sgg",
+            "subject-link":"lll"
+        }
+    ],
+    "pdf-add":[
+        {
+            "pdf-name":"sgg",
+            "pdf-link":"lll"
+        }
+    ],
+    "pdf-del":[
+        {
+            "pdf-name":"sgg",
+            "pdf-link":"lll"
+        }
+    ]
+    
+}

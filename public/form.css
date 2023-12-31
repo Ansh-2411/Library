@@ -1,0 +1,20 @@
+.feedback {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.feedback1 {
+    background-color: #e4e4e4;
+    height: 350px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .feedback1 {
+        height: max-content;
+    }
+}

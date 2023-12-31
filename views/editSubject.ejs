@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Subject</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+    <style>
+        .feedback1 {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h6 class="text-center"> /pdf?param1=param2=param3= <br> param1 = Branch no.<br> param2 = Semester no.<br>
+        param3 = subject no.</h6>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="/addSubject" method="post" class="feedback1">
+                    <h4 class="text-center feed-head">Add Subject</h4>
+                    <div class="feedback">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Subject Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" name="subjectName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput2" class="form-label">Link</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput2" name="link">
+                        </div>
+                        <label for="selectBranch" class="form-label">Select Branch</label>
+                        <select id="selectBranch" class="form-select" aria-label="Default select example" name="branch">
+                            <% for (var i=0; i < display.length; i++ ) { %>
+                                <option value="<%= i+1 %>">
+                                    <%= display[i].branch %>
+                                </option>
+                                <% } %>
+                        </select>
+                        <label for="selectSem" class="form-label">Select Semester</label>
+                        <select id="selectSem" class="form-select mb-3" aria-label="Default select example"
+                            name="semester">
+                            <option value="sem1">One</option>
+                            <option value="sem2">Two</option>
+                            <option value="sem3">Three</option>
+                            <option value="sem4">Four</option>
+                            <option value="sem5">Five</option>
+                            <option value="sem6">Six</option>
+                            <option value="sem7">Seven</option>
+                            <option value="sem8">Eigth</option>
+                        </select>
+                        <button class="btn btn-primary" type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form action="/deleteSubject" method="post" class="feedback1">
+                    <h4 class="text-center feed-head">Delete Subject</h4>
+                    <div class="feedback">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput3" class="form-label">Subject Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput3" name="subjectName">
+                        </div>
+                        <label for="selectBranch2" class="form-label">Select Branch</label>
+                        <select id="selectBranch2" class="form-select" aria-label="Default select example"
+                            name="branch">
+                            <% for (var i=0; i < display.length; i++ ) { %>
+                                <option value="<%= i+1 %>">
+                                    <%= display[i].branch %>
+                                </option>
+                                <% } %>
+                        </select>
+                        <label for="selectSem2" class="form-label">Select Semester</label>
+                        <select id="selectSem2" class="form-select mb-3" aria-label="Default select example"
+                            name="semester">
+                            <option value="sem1">One</option>
+                            <option value="sem2">Two</option>
+                            <option value="sem3">Three</option>
+                            <option value="sem4">Four</option>
+                            <option value="sem5">Five</option>
+                            <option value="sem6">Six</option>
+                            <option value="sem7">Seven</option>
+                            <option value="sem8">Eigth</option>
+                        </select>
+                        <button class="btn btn-primary" type="submit">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

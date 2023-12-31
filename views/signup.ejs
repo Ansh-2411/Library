@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/signup_style.css">
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Sign Up</h2>
+        <form action="signup" method="post">
+            <div class="user-box">
+                <input type="text" name="username" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" required="" id="p">
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="cpassword" required="" id="cp">
+                <label>Confirm Password</label>
+                <span class="error" id="msg" style="color: rgba(220, 20, 60, 0.726);"> </span>
+            </div>
+            <a href="#" onclick="sub.click()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+            <input type="submit" value="submit" id="sub" style="display: none;">
+        </form>
+    </div>
+</body>
+<script>
+    var msg = document.getElementById("msg")
+    cp.addEventListener("input", function () {
+        password = document.getElementById("p").value
+        confirmpassword = cp.value;
+        console.log(cp.value)
+        if (password != confirmpassword) {
+            msg.innerHTML = `password didn't match`
+
+        }
+        else {
+            msg.innerHTML = ``
+        }
+    })
+</script>
+
+</html>

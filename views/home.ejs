@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Library
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="cards.css">
+    <style>
+        /* .navbar {
+            background: #67677b !important;
+        } */
+
+        .dropdown-menu {
+            left: -45% !important;
+        }
+
+        /* span {
+            color: #fff !important;
+        } */
+
+        .selection {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selection-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 500px;
+            width: 90vw;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .feedback {
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 600px;
+        }
+
+        .feedback1 {
+            background-color: #e4e4e4;
+            height: 500px;
+            margin-top: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary bg-dark mb-2" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Library</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <%= user.name %>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Coming Soon...</a></li>
+                            <% if (adminInfo !=null) { %>
+                                <li><a class="dropdown-item" href="/adminLogin">Admin Login</li>
+                                <%} else { %>
+                                    <% } %>
+
+
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li> <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hola Students!</strong> Help us to add more pdfs (of any branch) here. To do so please goto dropdown on
+        your right and
+        click
+        Contact Us. ThankYou, have a great learning.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading1" class="text-center">Select Your Branch and Semester</h4>
+        <form action="/subject" method="post">
+            <div class="selection">
+                <div class="selection-form">
+                    <label for="selectBranch">Select Branch</label>
+                    <select id="selectBranch" class="form-select" aria-label="Default select example"
+                        style="width: 90%;" name="branch">
+                        <% for (var i=0; i < display.length; i++ ) { %>
+                            <option value="<%= i+1 %>">
+                                <%= display[i].branch %>
+                            </option>
+                            <% } %>
+                    </select>
+                    <label for="selectSem" class="mt-2">Select Semester</label>
+                    <select id="selectSem" class="form-select mb-3" aria-label="Default select example"
+                        style="width: 90%;" name="semester">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                        <option value="6">Six</option>
+                        <option value="7">Seven</option>
+                        <option value="8">Eigth</option>
+                    </select>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+        <h4 class="text-center mt-5">Select Your Branch</h4>
+        <section class="main" style="margin-top: 5px;">
+            <% for (var i=0; i < display.length; i++ ) { %>
+                <div class="box">
+                    <a href="<%= display[i].link %>">
+                        <h3>
+                            <%= display[i].branch %>
+                        </h3>
+                    </a>
+                </div>
+                <% } %>
+        </section>
+
+
+        <form action="/feedback" method="post" class="feedback1">
+            <h4 id="scrollspyHeading2" class="text-center feed-head">Leave Your Feedback</h4>
+            <div class="feedback">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="mail">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Mobile No.</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" name="mobile">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Feedback</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- Model -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Click Contact Now to send Mail. We will respond to your mail soon. <br> *This is not official PDEU
+                    website.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="mailto:pdpuelibrary@gmail.com"><button type="button" class="btn btn-primary">Contact
+                            Now</button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="extra"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

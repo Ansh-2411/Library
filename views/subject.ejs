@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= subData.branch %> Subject
+    </title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <section class="main" id="main">
+        <% if (selectData.semester==1 ) { %>
+            <% if (subData[selectData.branch-1].sem1.length !=0) { %>
+                <% subData[selectData.branch-1].sem1.forEach(function(obj) { %>
+                    <div class="box">
+                        <a href=<%=obj.subjectLink %>>
+                            <h3>
+                                <%= obj.subject %>
+                            </h3>
+                        </a>
+                    </div>
+                    <% }); %>
+                        <%} else { %>
+                            <h1 id="head">Not Available</h1>
+                            <% } %>
+
+                                <% } else if (selectData.semester==2) { %>
+                                    <% if (subData[selectData.branch-1].sem2.length !=0) { %>
+                                        <% subData[selectData.branch-1].sem2.forEach(function(obj) { %>
+                                            <div class="box">
+                                                <a href=<%=obj.subjectLink %>>
+                                                    <h3>
+                                                        <%= obj.subject %>
+                                                    </h3>
+                                                </a>
+                                            </div>
+                                            <% }); %>
+                                                <%} else { %>
+                                                    <h1 id="head">Not Available</h1>
+                                                    <% } %>
+                                                        <% } else if (selectData.semester==3) { %>
+                                                            <% if (subData[selectData.branch-1].sem3.length !=0) { %>
+                                                                <% subData[selectData.branch-1].sem3.forEach(function(obj)
+                                                                    { %>
+                                                                    <div class="box">
+                                                                        <a href=<%=obj.subjectLink %>>
+                                                                            <h3>
+                                                                                <%= obj.subject %>
+                                                                            </h3>
+                                                                        </a>
+                                                                    </div>
+                                                                    <% }); %>
+                                                                        <%} else { %>
+                                                                            <h1 id="head">Not Available</h1>
+                                                                            <% } %>
+                                                                                <% } else if (selectData.semester==4) {
+                                                                                    %>
+                                                                                    <% if
+                                                                                        (subData[selectData.branch-1].sem4.lengt0
+                                                                                        !=null) { %>
+                                                                                        <% subData[selectData.branch-1].sem4.forEach(function(obj)
+                                                                                            { %>
+                                                                                            <div class="box">
+                                                                                                <a href=<%=obj.subjectLink
+                                                                                                    %>>
+                                                                                                    <h3>
+                                                                                                        <%= obj.subject
+                                                                                                            %>
+                                                                                                    </h3>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                            <% }); %>
+                                                                                                <%} else { %>
+                                                                                                    <h1 id="head">
+                                                                                                        Not
+                                                                                                        Available
+                                                                                                    </h1>
+                                                                                                    <% } %>
+                                                                                                        <% } else if
+                                                                                                            (selectData.semester==5)
+                                                                                                            { %>
+                                                                                                            <% if
+                                                                                                                (subData[selectData.branch-1].sem5.lengt0
+                                                                                                                !=null)
+                                                                                                                { %>
+                                                                                                                <% subData[selectData.branch-1].sem5.forEach(function(obj)
+                                                                                                                    { %>
+                                                                                                                    <div
+                                                                                                                        class="box">
+                                                                                                                        <a href=<%=obj.subjectLink
+                                                                                                                            %>>
+                                                                                                                            <h3>
+                                                                                                                                <%= obj.subject
+                                                                                                                                    %>
+                                                                                                                            </h3>
+                                                                                                                        </a>
+                                                                                                                    </div>
+                                                                                                                    <% });
+                                                                                                                        %>
+                                                                                                                        <%} else
+                                                                                                                            {
+                                                                                                                            %>
+                                                                                                                            <h1
+                                                                                                                                id="head">
+                                                                                                                                Not
+                                                                                                                                Available
+                                                                                                                            </h1>
+                                                                                                                            <% }
+                                                                                                                                %>
+                                                                                                                                <% } else
+                                                                                                                                    if
+                                                                                                                                    (selectData.semester==6)
+                                                                                                                                    {
+                                                                                                                                    %>
+                                                                                                                                    <% if
+                                                                                                                                        (subData[selectData.branch-1].sem6.lengt0
+                                                                                                                                        !=null)
+                                                                                                                                        {
+                                                                                                                                        %>
+                                                                                                                                        <% subData[selectData.branch-1].sem6.forEach(function(obj)
+                                                                                                                                            {
+                                                                                                                                            %>
+                                                                                                                                            <div
+                                                                                                                                                class="box">
+                                                                                                                                                <a href=<%=obj.subjectLink
+                                                                                                                                                    %>>
+                                                                                                                                                    <h3>
+                                                                                                                                                        <%= obj.subject
+                                                                                                                                                            %>
+                                                                                                                                                    </h3>
+                                                                                                                                                </a>
+                                                                                                                                            </div>
+                                                                                                                                            <% });
+                                                                                                                                                %>
+                                                                                                                                                <%} else
+                                                                                                                                                    {
+                                                                                                                                                    %>
+                                                                                                                                                    <h1
+                                                                                                                                                        id="head">
+                                                                                                                                                        Not
+                                                                                                                                                        Available
+                                                                                                                                                    </h1>
+                                                                                                                                                    <% }
+                                                                                                                                                        %>
+                                                                                                                                                        <% } else
+                                                                                                                                                            if
+                                                                                                                                                            (selectData.semester==7)
+                                                                                                                                                            {
+                                                                                                                                                            %>
+                                                                                                                                                            <% if
+                                                                                                                                                                (subData[selectData.branch-1].sem7.lengt0
+                                                                                                                                                                !=null)
+                                                                                                                                                                {
+                                                                                                                                                                %>
+                                                                                                                                                                <% subData[selectData.branch-1].sem7.forEach(function(obj)
+                                                                                                                                                                    {
+                                                                                                                                                                    %>
+                                                                                                                                                                    <div
+                                                                                                                                                                        class="box">
+                                                                                                                                                                        <a href=<%=obj.subjectLink
+                                                                                                                                                                            %>>
+                                                                                                                                                                            <h3>
+                                                                                                                                                                                <%= obj.subject
+                                                                                                                                                                                    %>
+                                                                                                                                                                            </h3>
+                                                                                                                                                                        </a>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <% });
+                                                                                                                                                                        %>
+                                                                                                                                                                        <%} else
+                                                                                                                                                                            {
+                                                                                                                                                                            %>
+                                                                                                                                                                            <h1
+                                                                                                                                                                                id="head">
+                                                                                                                                                                                Not
+                                                                                                                                                                                Available
+                                                                                                                                                                            </h1>
+                                                                                                                                                                            <% }
+                                                                                                                                                                                %>
+                                                                                                                                                                                <% } else
+                                                                                                                                                                                    if
+                                                                                                                                                                                    (selectData.semester==8)
+                                                                                                                                                                                    {
+                                                                                                                                                                                    %>
+                                                                                                                                                                                    <% if
+                                                                                                                                                                                        (subData[selectData.branch-1].sem7.lengt0
+                                                                                                                                                                                        !=null)
+                                                                                                                                                                                        {
+                                                                                                                                                                                        %>
+                                                                                                                                                                                        <% subData[selectData.branch-1].sem8.forEach(function(obj)
+                                                                                                                                                                                            {
+                                                                                                                                                                                            %>
+                                                                                                                                                                                            <div
+                                                                                                                                                                                                class="box">
+                                                                                                                                                                                                <a href=<%=obj.subjectLink
+                                                                                                                                                                                                    %>>
+                                                                                                                                                                                                    <h3>
+                                                                                                                                                                                                        <%= obj.subject
+                                                                                                                                                                                                            %>
+                                                                                                                                                                                                    </h3>
+                                                                                                                                                                                                </a>
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            <% });
+                                                                                                                                                                                                %>
+                                                                                                                                                                                                <%} else
+                                                                                                                                                                                                    {
+                                                                                                                                                                                                    %>
+                                                                                                                                                                                                    <h1
+                                                                                                                                                                                                        id="head">
+                                                                                                                                                                                                        Not
+                                                                                                                                                                                                        Available
+                                                                                                                                                                                                    </h1>
+                                                                                                                                                                                                    <% }
+                                                                                                                                                                                                        %>
+                                                                                                                                                                                                        <%} else
+                                                                                                                                                                                                            {
+                                                                                                                                                                                                            %>
+                                                                                                                                                                                                            <h1
+                                                                                                                                                                                                                id="head">
+                                                                                                                                                                                                                Not
+                                                                                                                                                                                                                Available
+                                                                                                                                                                                                            </h1>
+                                                                                                                                                                                                            <% }
+                                                                                                                                                                                                                %>
+
+    </section>
+</body>
+
+</html>
